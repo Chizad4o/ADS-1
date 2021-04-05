@@ -13,14 +13,16 @@ int cbinsearch(int *arr, int size, int value) {
             flag = true;
             count += 1;
             int i = 1;
-            for (int i = 1; mid + i < size; i++) {
+            for (int j = mid; arr[j] == value; j++) {
                 if (arr[mid + i] == value) {
                     count += 1;
                 }
+            for (int i = mid-1; arr[i] == value; i--) {
                 if (arr[mid - i] == value) {
                     count += 1;
                 }
             }
+            break;
         } else if (arr[mid] > value) {
             r = mid - 1;
         } else {
