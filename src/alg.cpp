@@ -3,7 +3,7 @@
 int cbinsearch(int *arr, int size, int value) {
     //  поместить сюда реализацию алгоритма
     int l = 0;
-    int r = size;
+    int r = size - 1;
     int mid;
     int count = 0;
     while (l < r) {
