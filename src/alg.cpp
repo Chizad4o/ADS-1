@@ -10,7 +10,7 @@ int cbinsearch(int *arr, int size, int value) {
         mid = (l + r) / 2;
         if (arr[mid] == value) {
             for (int j = mid; arr[j] == value; j++) {
-                if (arr[mid + i] == value) {
+                if (arr[mid + j] == value) {
                     count++;
                 }
             }
